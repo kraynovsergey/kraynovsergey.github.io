@@ -1,0 +1,310 @@
+form.filter(action="#" method="post")
+	.filter__item
+		button.filter__control(type="button")._active Цена за квартиру
+		.text.filter__checkbox._active Тут будет ползунок от mFilter, верстать сейчас нет смысла
+
+	.filter__item
+		button.filter__control(type="button")._active Район
+
+		.filter__checkbox._active
+			input#district-1(type="checkbox" name="district" value="")
+			label(for="district-1") Дзержинский
+				span
+
+		.filter__checkbox._active
+			input#district-2(type="checkbox" name="district" value="")
+			label(for="district-2") Железнодорожный
+				span
+
+		.filter__checkbox._active
+			input#district-3(type="checkbox" name="district" value="")
+			label(for="district-3") Заельцовский
+				span
+
+		.filter__checkbox._active
+			input#district-4(type="checkbox" name="district" value="")
+			label(for="district-4") Калининский
+				span
+
+		.filter__checkbox._active
+			input#district-5(type="checkbox" name="district" value="")
+			label(for="district-5") Кировский
+				span
+
+		.filter__checkbox._active
+			input#district-6(type="checkbox" name="district" value="")
+			label(for="district-6") Ленинский
+				span
+
+		.filter__checkbox._active
+			input#district-7(type="checkbox" name="district" value="")
+			label(for="district-7") Октябрьский
+				span
+
+		.filter__checkbox._active
+			input#district-8(type="checkbox" name="district" value="")
+			label(for="district-8") Первомайский
+				span
+
+		.filter__checkbox._active
+			input#district-9(type="checkbox" name="district" value="")
+			label(for="district-9") Советский
+				span
+
+		.filter__checkbox._active
+			input#district-10(type="checkbox" name="district" value="")
+			label(for="district-10") Центральный
+				span
+
+		.filter__checkbox._active
+			input#district-11(type="checkbox" name="district" value="")
+			label(for="district-11") НСО
+				span
+
+	.filter__item
+		button.filter__control(type="button") Станция метро
+
+		.filter__checkbox
+			input#metro-1(type="checkbox" name="metro" value="")
+			label(for="metro-1") Берёзовая роща
+				span
+		.filter__checkbox
+			input#metro-2(type="checkbox" name="metro" value="")
+			label(for="metro-2") Гагаринская
+				span
+
+		.filter__checkbox
+			input#metro-3(type="checkbox" name="metro" value="")
+			label(for="metro-3") Заельцовская
+				span
+
+		.filter__checkbox
+			input#metro-4(type="checkbox" name="metro" value="")
+			label(for="metro-4") Золотая нива
+				span
+
+		.filter__checkbox
+			input#metro-5(type="checkbox" name="metro" value="")
+			label(for="metro-5") Красный проспект
+				span
+
+		.filter__checkbox
+			input#metro-6(type="checkbox" name="metro" value="")
+			label(for="metro-6") Маршала Покрышкина
+				span
+
+		.filter__checkbox
+			input#metro-7(type="checkbox" name="metro" value="")
+			label(for="metro-7") Октябрьская
+				span
+
+		.filter__checkbox
+			input#metro-8(type="checkbox" name="metro" value="")
+			label(for="metro-8") Площадь Гарина-Михайловского
+				span
+
+		.filter__checkbox
+			input#metro-9(type="checkbox" name="metro" value="")
+			label(for="metro-9") Площадь Ленина
+				span
+
+		.filter__checkbox
+			input#metro-10(type="checkbox" name="metro" value="")
+			label(for="metro-10") Площадь Маркса
+				span
+
+		.filter__checkbox
+			input#metro-11(type="checkbox" name="metro" value="")
+			label(for="metro-11") Речной вокзал
+				span
+
+		.filter__checkbox
+			input#metro-12(type="checkbox" name="metro" value="")
+			label(for="metro-12") Сибирская
+				span
+
+		.filter__checkbox
+			input#metro-13(type="checkbox" name="metro" value="")
+			label(for="metro-13") Спортивная
+				span
+
+		.filter__checkbox
+			input#metro-14(type="checkbox" name="metro" value="")
+			label(for="metro-14") Студенческая
+				span
+
+	.filter__item
+		button.filter__control(type="button") Тип дома
+
+		.filter__checkbox
+			input#typebuilding-1(type="checkbox" name="typebuilding" value="")
+			label(for="typebuilding-1") Кирпичный
+				span
+
+		.filter__checkbox
+			input#typebuilding-2(type="checkbox" name="typebuilding" value="")
+			label(for="typebuilding-2") Монолитно-каркасный
+				span
+
+		.filter__checkbox
+			input#typebuilding-3(type="checkbox" name="typebuilding" value="")
+			label(for="typebuilding-3") Монолитно-кирпичный
+				span
+
+		.filter__checkbox
+			input#typebuilding-4(type="checkbox" name="typebuilding" value="")
+			label(for="typebuilding-4") Монолитный
+				span
+
+		.filter__checkbox
+			input#typebuilding-5(type="checkbox" name="typebuilding" value="")
+			label(for="typebuilding-5") Панельный
+				span
+
+		.filter__checkbox
+			input#typebuilding-6(type="checkbox" name="typebuilding" value="")
+			label(for="typebuilding-6") Сборно-монолитный железобетонный каркас
+				span
+
+	.filter__item
+		button.filter__control(type="button") Отделка
+
+		.filter__checkbox
+			input#finishing-1(type="checkbox" name="finishing" value="")
+			label(for="finishing-1") Черновая
+				span
+
+		.filter__checkbox
+			input#finishing-2(type="checkbox" name="finishing" value="")
+			label(for="finishing-2") Предчистовая
+				span
+
+		.filter__checkbox
+			input#finishing-3(type="checkbox" name="finishing" value="")
+			label(for="finishing-3") Чистовая
+				span
+
+	.filter__item
+		button.filter__control(type="button") Срок сдачи
+
+		.filter__checkbox
+			input#deadline-1(type="checkbox" name="deadline" value="")
+			label(for="deadline-1") Дом сдан
+				span
+
+		.filter__checkbox
+			input#deadline-2(type="checkbox" name="deadline" value="")
+			label(for="deadline-2") 2021
+				span
+
+		.filter__checkbox
+			input#deadline-3(type="checkbox" name="deadline" value="")
+			label(for="deadline-3") 2022
+				span
+
+		.filter__checkbox
+			input#deadline-4(type="checkbox" name="deadline" value="")
+			label(for="deadline-4") 2023
+				span
+
+		.filter__checkbox
+			input#deadline-5(type="checkbox" name="deadline" value="")
+			label(for="deadline-5") 2024
+				span
+
+		.filter__checkbox
+			input#deadline-6(type="checkbox" name="deadline" value="")
+			label(for="deadline-6") 2025
+				span
+
+		.filter__checkbox
+			input#deadline-7(type="checkbox" name="deadline" value="")
+			label(for="deadline-7") 2026
+				span
+
+		.filter__checkbox
+			input#deadline-8(type="checkbox" name="deadline" value="")
+			label(for="deadline-8") 2027
+				span
+
+		.filter__checkbox
+			input#deadline-9(type="checkbox" name="deadline" value="")
+			label(for="deadline-9") 2028
+				span
+
+		.filter__checkbox
+			input#deadline-10(type="checkbox" name="deadline" value="")
+			label(for="deadline-10") 2029
+				span
+
+		.filter__checkbox
+			input#deadline-11(type="checkbox" name="deadline" value="")
+			label(for="deadline-11") 2030
+				span
+
+	.filter__item
+		button.filter__control(type="button") Этажей в доме
+
+		.filter__checkbox Тут будет ползунок от mFilter, верстать сейчас нет смысла
+
+	.filter__item
+		button.filter__control(type="button") Комнатность
+
+		.filter__checkbox
+			input#rooms-1(type="checkbox" name="rooms" value="")
+			label(for="rooms-1") Студии
+				span
+
+		.filter__checkbox
+			input#rooms-2(type="checkbox" name="rooms" value="")
+			label(for="rooms-2") 1
+				span
+
+		.filter__checkbox
+			input#rooms-3(type="checkbox" name="rooms" value="")
+			label(for="rooms-3") 2
+				span
+
+		.filter__checkbox
+			input#rooms-4(type="checkbox" name="rooms" value="")
+			label(for="rooms-4") 3
+				span
+
+		.filter__checkbox
+			input#rooms-5(type="checkbox" name="rooms" value="")
+			label(for="rooms-5") 4+
+				span
+
+	.filter__item
+		button.filter__control(type="button") Медиа
+
+		.filter__checkbox
+			input#media-1(type="checkbox" name="media" value="")
+			label(for="media-1") С фото
+				span
+
+		.filter__checkbox
+			input#media-2(type="checkbox" name="media" value="")
+			label(for="media-2") С планировками
+				span
+
+		.filter__checkbox
+			input#media-3(type="checkbox" name="media" value="")
+			label(for="media-3") С видео
+				span
+
+	.filter__item
+		button.filter__control(type="button") Теги
+
+		.filter__checkbox
+			input#tags-1(type="checkbox" name="tags" value="")
+			label(for="tags-1") С подземной парковкой
+				span
+
+		.filter__checkbox
+			input#tags-2(type="checkbox" name="tags" value="")
+			label(for="tags-2") С наземной парковкой
+				span
+
+	button.btn.filter__btn(type="submit") Найти
+
