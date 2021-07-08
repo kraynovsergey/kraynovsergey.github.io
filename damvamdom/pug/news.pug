@@ -1,0 +1,46 @@
+doctype html
+html(lang="ru")
+	head
+		- var seo = {title: 'Новости', description: 'Описание страницы новостей', keywords: 'Ключи страницы новостей'}
+		include includes/_meta.pug
+	body
+		include includes/_header.pug
+		include includes/_search.pug
+
+		main.main
+			.container.main__cols
+
+				.main__content
+					include includes/_breadcrumbs.pug
+
+					h1.h1 Новости новостроек Новосибирска
+
+					- var n = 0;
+					while n < 5
+						.news-item._page
+							.news-item__col.news-item__img._left
+								a(href="news-page.html")
+									picture
+										source(type="image/webp" srcset="img/tmp/carousel-news.webp")
+										img(src="img/tmp/carousel-news.jpg" alt="")
+							.news-item__col._right
+								.news-item__top
+									.news-item__beige
+										.news-item__date 12.06.2020
+										a(href="zhk.html") ярлык жк
+									a.news-item__title(href="news-page.html") Строительство коттеджных поселков
+									.news-item__text Инструменты портала помогают легко ориентироваться в сотнях поселков от петербургских строительных компаний.
+								a.news-item__link(href="news-page.html")
+									span Читать подробнее
+									svg(width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg")
+										path(d="M1.0625 6.42934H13.6638L9.80687 1.75833C9.62653 1.53954 9.53976 1.25748 9.56567 0.974193C9.59157 0.690905 9.72802 0.429595 9.945 0.247748C10.162 0.0659016 10.4417 -0.0215855 10.7227 0.00453334C11.0036 0.0306521 11.2628 0.168237 11.4431 0.387021L16.7556 6.81502C16.7914 6.86615 16.8233 6.91986 16.8513 6.97572C16.8513 7.02928 16.8512 7.06142 16.9256 7.11499C16.9738 7.23783 16.999 7.36859 17 7.50067C16.999 7.63275 16.9738 7.76351 16.9256 7.88635C16.9256 7.93992 16.9256 7.97206 16.8513 8.02562C16.8233 8.08148 16.7914 8.13519 16.7556 8.18632L11.4431 14.6143C11.3432 14.7353 11.2181 14.8325 11.0767 14.8992C10.9353 14.9658 10.7811 15.0003 10.625 15C10.3767 15.0005 10.1362 14.9133 9.945 14.7536C9.83741 14.6637 9.74848 14.5532 9.68329 14.4286C9.61811 14.3039 9.57795 14.1675 9.56512 14.0272C9.55229 13.8869 9.56704 13.7454 9.60852 13.6108C9.65001 13.4763 9.71741 13.3513 9.80687 13.243L13.6638 8.572H1.0625C0.780708 8.572 0.510456 8.45913 0.311199 8.25822C0.11194 8.0573 0 7.7848 0 7.50067C0 7.21653 0.11194 6.94404 0.311199 6.74312C0.510456 6.54221 0.780708 6.42934 1.0625 6.42934Z" fill="#87919F")
+						- n = n + 1;
+
+					include includes/_pagination.pug
+
+				aside.main__aside
+					include includes/_filters.pug
+
+		include includes/_footer.pug
+
+		include includes/_scripts.pug
