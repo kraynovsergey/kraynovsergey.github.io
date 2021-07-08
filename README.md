@@ -1,3 +1,3 @@
 # kraynovsergey.github.io
 My projects
-- https://kraynovsergey.github.io/damvamdom/
+- [damvamdom] (https://kraynovsergey.github.io/damvamdom/)
