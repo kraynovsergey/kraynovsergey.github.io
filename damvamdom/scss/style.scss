@@ -1,0 +1,37 @@
+$black: #292929;
+$white: #fff;
+$grey: #6E6F71;
+$greyBg: #EFEFEF;
+$darkGrey: #87919F;
+$lightGrey: #C0C3C8;
+$blue: #486B9B;
+$transition: 0.5s ease;
+
+@import "includes/fonts";
+@import "includes/mixin";
+
+@import "includes/default";
+@import "includes/header";
+@import "includes/search";
+@import "includes/main";
+@import "includes/text";
+@import "includes/section";
+@import "includes/carousel";
+@import "includes/zhk";
+@import "includes/pluses";
+@import "includes/reviews";
+@import "includes/news";
+@import "includes/filter";
+@import "includes/footer";
+@import "includes/breadcrumbs";
+@import "includes/sorting";
+@import "includes/tags";
+@import "includes/photo";
+@import "includes/info";
+@import "includes/video";
+@import "includes/document";
+@import "includes/place";
+@import "includes/contacts";
+@import "includes/pagination";
+@import "includes/states";
+
