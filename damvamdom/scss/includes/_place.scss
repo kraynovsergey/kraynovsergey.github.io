@@ -1,0 +1,34 @@
+.place {
+	
+	&__cols {
+		@include flex;
+		margin: 0 -30px;
+		
+		@media (max-width: 1199px) {
+			margin: 0;
+			@include flex-wrap(wrap);
+		}
+	}
+	
+	&__col {
+		width: 50%;
+		padding: 0 30px;
+		
+		@media (max-width: 1199px) {
+			width: 100%;
+			padding: 0;
+			margin-bottom: 30px;
+		}
+		
+		&._full {
+			width: 100% !important;
+		}
+		
+		&:last-child {
+			
+			@media (max-width: 1199px) {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

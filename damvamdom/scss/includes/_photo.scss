@@ -1,0 +1,7 @@
+.photo-item {
+	
+	& img {
+		@include border-radius(8px);
+		max-width: 100%;
+	}
+}

@@ -1,0 +1,41 @@
+.main {
+	padding: 60px 0 100px;
+	position: relative;
+	z-index: 3;
+	
+	@media (max-width: 991px) {
+		padding: 30px 0 50px;
+	}
+	
+	&__cols {
+		@include flex;
+		@include justify-content(space-between);
+		
+		@media (max-width: 991px) {
+			@include flex-direction(column);
+		}
+	}
+	
+	&__content {
+		max-width: calc(100% - 300px);
+		min-width: calc(100% - 300px);
+		
+		@media (max-width: 991px) {
+			max-width: 100%;
+			min-width: 100%;
+		}
+	}
+	
+	&__aside {
+		max-width: 261px;
+		min-width: 261px;
+		margin-left: 39px;
+		
+		@media (max-width: 991px) {
+			max-width: 100%;
+			min-width: 100%;
+			margin-left: 0;
+			margin-top: 40px;
+		}
+	}
+}

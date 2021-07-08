@@ -1,0 +1,39 @@
+.pagination {
+	@include flex;
+	@include align-items(center);
+	@include justify-content(center);
+	margin: 100px 0 0;
+	padding: 0;
+	list-style: none;
+	
+	@media (max-width: 991px) {
+		margin-top: 50px;
+	}
+	
+	& li {
+		font-size: 12px;
+		font-weight: bold;
+		color: $darkGrey;
+		margin: 0 5px;
+		
+		&:hover,
+		&._active {
+			
+			& a {
+				background: #D6DBE3;
+			}
+		}
+		
+		& a {
+			@include border-radius(5px);
+			@include flex;
+			@include align-items(center);
+			@include justify-content(center);
+			width: 30px;
+			height: 30px;
+			border: 1px solid #EBEBEB;
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+}

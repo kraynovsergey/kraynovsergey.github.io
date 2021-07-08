@@ -1,0 +1,174 @@
+.header {
+	background: $greyBg;
+	color: $black;
+	font-size: 14px;
+	font-weight: bold;
+	position: relative;
+	z-index: 5;
+	
+	&__cols {
+		@include flex;
+		@include align-items(center);
+		@include justify-content(space-between);
+		height: 80px;
+		position: relative;
+		
+		@media (max-width: 991px) {
+			height: 70px;
+		}
+	}
+	
+	&__logo {
+		
+		& img {
+			@media (max-width: 991px) {
+				max-height: 30px;
+			}
+		}
+	}
+	
+	&__nav {
+		@include flex;
+		@include align-items(center);
+		@include transition($transition);
+		margin: 0 30px;
+		padding: 0;
+		list-style: none;
+		
+		@media (max-width: 991px) {
+			@include flex-direction(column);
+			@include align-items(flex-start);
+			position: absolute;
+			top: 100%;
+			margin: 0;
+			background: $darkGrey;
+			padding: 30px;
+			top: 100%;
+			left: -100vw;
+			opacity: 0;
+		}
+		
+		&._active {
+			left: 12px;
+			right: 12px;
+			opacity: 1;
+		}
+		
+		& li {
+			margin-right: 48px;
+			
+			@media (max-width: 991px) {
+				margin-right: 0;
+				margin-bottom: 30px;
+			}
+			
+			&:last-child {
+				margin-right: 0;
+				margin-bottom: 0;
+			}
+			
+			&:hover,
+			&._active {
+				
+				& a {
+					color: $darkGrey;
+					
+					@media (max-width: 991px) {
+						color: $grey;
+					}
+				}
+			}
+			
+			& a {
+				@include transition($transition);
+				color: inherit;
+				text-decoration: none;
+				
+				@media (max-width: 991px) {
+					color: $greyBg;
+				}
+			}
+		}
+	}
+	
+	&__right {
+		@include flex;
+		@include align-items(center);
+	}
+	
+	&__search {
+		margin-right: 70px;
+		
+		@media (max-width: 991px) {
+			margin-right: 35px;
+		}
+		
+		@media (max-width: 576px) {
+			margin-right: 20px;
+		}
+		
+		&:hover {
+			
+			& svg path {
+				fill: $darkGrey;
+			}
+		}
+		
+		& svg path {
+			@include transition($transition);
+		}
+	}
+	
+	&__phone {
+		@include transition($transition);
+		color: inherit;
+		text-decoration: none;
+		
+		&:hover {
+			color: $darkGrey;
+		}
+	}
+	
+	&__burger {
+		display: none;
+		width: 30px;
+		height: 30px;
+		position: relative;
+		
+		@media (max-width: 991px) {
+			display: inline-block;
+		}
+		
+		&._active {
+			
+			& span {
+				position: absolute;
+				
+				&:first-child {
+					@include transform(rotate(-45deg));
+				}
+				
+				&:nth-child(2) {
+					@include transform(rotate(45deg));
+				}
+				
+				&:last-child {
+					display: none;
+				}
+			}
+		}
+		
+		& span {
+			@include transition($transition);
+			width: 30px;
+			height: 2px;
+			background: $black;
+			display: block;
+			margin-bottom: 4px;
+			
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

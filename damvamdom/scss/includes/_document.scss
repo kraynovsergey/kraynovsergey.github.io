@@ -1,0 +1,56 @@
+.document {
+	margin-bottom: -30px;
+	
+	@media (max-width: 991px) {
+		margin-bottom: -20px;
+	}
+	
+	&__cols {
+		@include flex;
+		@include flex-wrap(wrap);
+		margin: 0 -20px;
+		
+		@media (max-width: 991px) {
+			margin: 0 -12px;
+		}
+	}
+	
+	&__item {
+		padding: 0 20px;
+		color: $grey;
+		text-decoration: none;
+		font-size: 14px;
+		width: 25%;
+		margin-bottom: 30px;
+		
+		@media (max-width: 991px) {
+			padding: 0 12px;
+			margin-bottom: 20px;
+		}
+		
+		@media (max-width: 768px) {
+			width: 33.33%;
+		}
+		
+		@media (max-width: 576px) {
+			width: 50%;
+		}
+		
+		&:hover {
+			color: $black;
+			
+			& svg path {
+				fill: $black;
+			}
+		}
+		
+		& svg {
+			display: block;
+			margin-bottom: 12px;
+			
+			& path {
+				@include transition($transition);
+			}
+		}
+	}
+}

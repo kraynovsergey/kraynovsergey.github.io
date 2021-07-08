@@ -1,0 +1,100 @@
+.reviews-item {
+	@include flex;
+	@include flex-direction(column);
+	@include border-radius(8px);
+	background: #EFF1F4;
+	padding: 43px 30px 56px;
+	
+	@media (max-width: 991px) {
+		padding: 20px 15px 25px;
+	}
+	
+	&__title {
+		font-size: 18px;
+		line-height: 22px;
+		color: $black;
+		font-weight: bold;
+		margin-bottom: 30px;
+		
+		@media (max-width: 991px) {
+			font-size: 16px;
+			line-height: 20px;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.reviews-form {
+	width: 503px;
+	
+	@media (max-width: 768px) {
+		width: 100%;
+	}
+	
+	&__group {
+		margin-bottom: 20px;
+	}
+	
+	&__input {
+		@include transition($transition);
+		@include border-radius(10px);
+		display: block;
+		width: 100%;
+		height: 60px;
+		border: 0;
+		line-height: 60px;
+		padding: 0 30px;
+		background: #EFF1F4;
+		font-size: 14px;
+		color: $black;
+		
+		@media (max-width: 991px) {
+			height: 50px;
+			line-height: 50px;
+		}
+		
+		&::-ms-input-placeholder {
+			color: #B7B7B7;
+		}
+		&::-moz-placeholder {
+			color: #B7B7B7;
+		}
+		&::-webkit-input-placeholder {
+			color: #B7B7B7;
+		}
+	}
+	
+	&__textarea {
+		@include transition($transition);
+		@include border-radius(10px);
+		display: block;
+		width: 100%;
+		height: 157px;
+		border: 0;
+		line-height: 18px;
+		padding: 20px 30px;
+		background: #EFF1F4;
+		font-size: 14px;
+		color: $black;
+		resize: none;
+		
+		@media (max-width: 991px) {
+			height: 100px;
+		}
+		
+		&::-ms-input-placeholder {
+			color: #B7B7B7;
+		}
+		&::-moz-placeholder {
+			color: #B7B7B7;
+		}
+		&::-webkit-input-placeholder {
+			color: #B7B7B7;
+		}
+	}
+	
+	&__btn {
+		font-weight: bold;
+		width: 262px;
+	}
+}

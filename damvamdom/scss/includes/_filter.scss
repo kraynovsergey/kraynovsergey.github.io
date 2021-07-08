@@ -1,0 +1,112 @@
+.filter {
+	@include border-radius(8px);
+	background: $greyBg;
+	padding: 40px 34px 60px;
+	
+	&__item {
+		margin-bottom: 48px;
+	}
+	
+	&__control {
+		@include flex;
+		@include align-items(center);
+		@include justify-content(space-between);
+		@include transition($transition);
+		font-size: 18px;
+		color: $black;
+		font-weight: bold;
+		width: 100%;
+		
+		&::after {
+			content: '';
+			width: 7px;
+			height: 7px;
+			border-top: 2px solid $black;
+			border-right: 2px solid $black;
+			@include transform(rotate(135deg));
+			@include transition($transition);
+			position: relative;
+			top: -2px;
+		}
+		
+		&:hover {
+			color: $darkGrey;
+			
+			&::after {
+				border-top: 2px solid $darkGrey;
+				border-right: 2px solid $darkGrey;
+			}
+		}
+		
+		&._active {
+			margin-bottom: 20px;
+			
+			&::after {
+				@include transform(rotate(-45deg));
+				top: 2px;
+			}
+		}
+	}
+	
+	&__btn {
+		font-weight: bold;
+	}
+	
+	&__checkbox {
+		margin-bottom: 16px;
+		display: none;
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+		
+		&._active {
+			display: block;
+		}
+		
+		& input {
+			display: none;
+			
+			&:checked {
+				& + label span::before {
+					opacity: 1;
+				}
+			}
+		}
+		
+		& label {
+			@include flex;
+			@include align-items(center);
+			font-size: 14px;
+			color: #4F5665;
+			cursor: pointer;
+			
+			& span {
+				@include flex;
+				@include align-items(center);
+				@include justify-content(center);
+				@include border-radius(4px);
+				@include order(-1);
+				margin-right: 14px;
+				min-width: 22px;
+				max-width: 22px;
+				height: 22px;
+				background: $white;
+				
+				&::before {
+					content: '';
+					width: 10px;
+					height: 6px;
+					border-left: 2px solid $black;
+					border-bottom: 2px solid $black;
+					@include transition($transition);
+					@include transform(rotate(-45deg));
+					position: relative;
+					top: -2px;
+					opacity: 0;
+				}
+				
+			}
+		}
+	}
+}

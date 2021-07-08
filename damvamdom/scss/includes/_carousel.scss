@@ -1,0 +1,108 @@
+.carousel {
+	
+	&__controls {
+		@include flex;
+		@include align-items(center);
+		@include justify-content(space-between);
+		margin-top: 36px;
+		
+		@media (max-width: 991px) {
+			margin-top: 20px;
+		}
+		
+		@media (max-width: 576px) {
+			@include justify-content(center);
+		}
+		
+		&._head {
+			margin: 0;
+		}
+	}
+	
+	&__nav {
+		@include flex;
+		@include align-items(center);
+		
+		@media (max-width: 576px) {
+			display: none;
+		}
+		
+		& button {
+			@include border-radius(50%);
+			background: #DDE0E4;
+			width: 15px;
+			height: 15px;
+			margin-right: 15px;
+			
+			&:last-child {
+				margin-right: 0;
+			}
+			
+			&.tns-nav-active {
+				@include border-radius(7.5px);
+				width: 45px;
+				background: $darkGrey;
+			}
+			
+			&._hidden {
+				display: none;
+			}
+		}
+	}
+	
+	&__control {
+		@include flex;
+		@include align-items(center);
+		
+		& button {
+			@include border-radius(50%);
+			@include flex;
+			@include flex-direction(column);
+			@include align-items(center);
+			@include justify-content(center);
+			width: 60px;
+			height: 60px;
+			border: 2px solid $darkGrey;
+			
+			@media (max-width: 991px) {
+				width: 40px;
+				height: 40px;
+			}
+			
+			&:disabled {
+				opacity: .3;
+			}
+			
+			&._next {
+				margin-left: 40px;
+				
+				@media (max-width: 991px) {
+					margin-left: 20px;
+				}
+				
+				& svg {
+					@include transform(rotate(180deg));
+				}
+			}
+			
+			& svg {
+				@media (max-width: 991px) {
+					width: 16px;
+					height: 12px;
+				}
+			}
+			
+			& svg path {
+				@include transition($transition);
+			}
+			
+			&:hover {
+				background: $darkGrey;
+				
+				& svg path {
+					fill: $white;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,130 @@
+body {
+	background: $white;
+	color: $grey;
+	font-size: 16px;
+	font-weight: normal;
+	font-family: 'Montserrat';
+	overflow-x: hidden;
+	
+	@media (max-width: 991px) {
+		font-size: 14px;
+	}
+}
+
+body * {
+	outline: none !important;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+body a {
+	@include transition($transition);
+	color: $darkGrey;
+	text-decoration: underline;
+	
+	&:hover {
+		text-decoration: none;
+		color: $black;
+	}
+}
+
+.container {
+	@media (min-width: 1200px) {
+		max-width: 1190px;
+	}
+}
+
+button {
+	@include border-radius(0);
+	@include transition($transition);
+	background: none;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+}
+
+.full-link {
+	
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+.btn {
+	@include border-radius(8px);
+	@include transition($transition);
+	display: block;
+	width: 100%;
+	text-align: center;
+	background: $darkGrey;
+	height: 56px;
+	line-height: 56px;
+	font-size: 16px;
+	color: $white;
+	
+	&:hover {
+		background: $black;
+	}
+	
+	@media (max-width: 991px) {
+		height: 40px;
+		line-height: 40px;
+	}
+}
+
+h1,
+.h1 {
+	font-weight: 800;
+	font-size: 42px;
+	line-height: 54px;
+	color: $black;
+	margin: 0 0 36px;
+	padding: 0;
+	
+	@media (max-width: 991px) {
+		font-size: 34px;
+		line-height: 40px;
+		margin-bottom: 25px;
+	}
+}
+
+h2,
+.h2 {
+	font-weight: 800;
+	font-size: 36px;
+	line-height: 42px;
+	color: $black;
+	margin: 0 0 36px;
+	padding: 0;
+	
+	@media (max-width: 991px) {
+		font-size: 26px;
+		line-height: 32px;
+		margin-bottom: 25px;
+	}
+}
+
+h3,
+.h3 {
+	font-weight: 800;
+	font-size: 30px;
+	line-height: 36px;
+	color: $black;
+	margin: 0 0 36px;
+	padding: 0;
+	
+	@media (max-width: 991px) {
+		font-size: 20px;
+		line-height: 26px;
+		margin-bottom: 25px;
+	}
+}

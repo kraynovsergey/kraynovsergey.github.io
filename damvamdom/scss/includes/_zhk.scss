@@ -1,0 +1,114 @@
+.zhk-item {
+	@include flex;
+	@include flex-direction(column);
+	@include align-items(flex-start);
+	
+	&._incol {
+		padding: 0 19px;
+		width: 33.33%;
+		margin-bottom: 48px;
+		
+		@media (max-width: 991px) {
+			padding: 0 12px;
+			margin-bottom: 30px;
+		}
+		
+		@media (max-width: 768px) {
+			width: 50%;
+		}
+		
+		@media (max-width: 576px) {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+	
+	&__img {
+		margin-bottom: 20px;
+		width: 100%;
+		
+		@media (max-width: 991px) {
+			margin-bottom: 15px;
+		}
+		
+		& img {
+			@include border-radius(8px);
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+	
+	&__builder {
+		margin-bottom: 14px;
+		color: $blue;
+		text-decoration: none;
+		font-size: 16px;
+		
+		@media (max-width: 991px) {
+			margin-bottom: 10px;
+			font-size: 14px;
+		}
+		
+		&:hover {
+			color: $darkGrey;
+		}
+	}
+	
+	&__title {
+		font-size: 18px;
+		color: $black;
+		text-decoration: none;
+		font-weight: bold;
+		
+		@media (max-width: 991px) {
+			font-size: 16px;
+		}
+		
+		&:hover {
+			color: $darkGrey;
+		}
+	}
+}
+
+.zhk-cols {
+	@include flex;
+	@include flex-wrap(wrap);
+	margin: 0 -19px;
+	
+	@media (max-width: 991px) {
+		margin: 0 -12px;
+	}
+}
+
+.zhk-aside {
+	@include border-radius(8px);
+	position: sticky;
+	top: 20px;
+	background: $greyBg;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	
+	& li {
+		display: block;
+		width: 100%;
+		border-bottom: 1px solid #D6DBE3;
+		
+		&:last-child {
+			border-bottom: 0;
+		}
+		
+		& a {
+			display: block;
+			padding: 12px 51px 12px 28px;
+			font-size: 12px;
+			color: $black;
+			font-weight: bold;
+			text-decoration: none;
+			
+			&:hover {
+				color: $darkGrey;
+			}
+		}
+	}
+}

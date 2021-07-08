@@ -1,0 +1,68 @@
+.contacts {
+	
+	&__map {
+		max-width: 664px;
+	}
+	
+	&__items {
+		@include flex;
+		@include flex-direction(column);
+		@include align-items(flex-start);
+		width: 262px;
+	}
+	
+	&__link {
+		@include flex;
+		@include align-items(center);
+		text-decoration: none;
+		font-size: 18px;
+		color: $black;
+		font-weight: bold;
+		margin-bottom: 20px;
+		
+		&:hover {
+			color: $darkGrey;
+			
+			& svg path {
+				fill: $darkGrey;
+			}
+		}
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+		
+		& svg {
+			@include order(-1);
+			margin-right: 14px;
+			
+			& path {
+				@include transition($transition);
+			}
+		}
+	}
+	
+	&__messanger {
+		@include border-radius(8px);
+		@include flex;
+		@include align-items(center);
+		width: 100%;
+		margin-bottom: 20px;
+		height: 60px;
+		background: $darkGrey;
+		font-size: 14px;
+		font-weight: bold;
+		color: $white !important;
+		text-decoration: none;
+		padding-left: 26px;
+		
+		&:hover {
+			background: $black;
+		}
+		
+		& svg {
+			@include order(-1);
+			margin-right: 13px;
+		}
+	}
+}
