@@ -1,0 +1,98 @@
+section.header
+	.container
+
+		a.logo(href="index.html")
+			picture
+				source(type="image/webp" srcset="img/logo.webp")
+				img(src="img/logo.png" alt="Стоматология Акула")
+			span Стоматология
+				strong Акула
+		ul.header__nav
+			li
+				a(href="about.html") О клинике
+
+				ul
+					li
+						a(href="text.html") История
+					li
+						a(href="licenses.html") Лицензии
+					li
+						a(href="doctors.html") Наши врачи
+					li
+						a(href="text.html") Информация потребителю
+			li
+				a._parent._active(href="#") Услуги
+
+				ul
+					li
+						a._active(href="service.html") Терапия
+					li
+						a(href="service.html") Хирургия
+					li
+						a(href="service.html") Диагностика
+					li
+						a(href="service.html") Ортопедия
+					li
+						a(href="service.html") Профгигиена
+					li
+						a(href="service.html") Для детей
+			li
+				a(href="prices.html") Цены
+			li
+				a(href="reviews.html") Отзывы
+			li
+				a(href="contacts.html") Контакты
+
+		.header__phone
+			a.header__phone-link(href="tel:")
+				svg(width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg")
+					use(xlink:href="#phone")
+
+				span 8 (4922)
+					strong  44 68 15
+			button.header__callback(type="button" data-hystmodal="#popup-callback") обратный звонок
+
+		button.btn._small.header__btn(type="button" data-hystmodal="#popup-order") Запись на прием
+
+		button.header__burger
+			span
+			span
+			span
+
+	.header__mobile
+		.container
+			ul.header__mobile-nav
+				li
+					a(href="about.html") О клинике
+
+					ul
+						li
+							a(href="text.html") История
+						li
+							a(href="licenses.html") Лицензии
+						li
+							a(href="doctors.html") Наши врачи
+						li
+							a(href="text.html") Информация потребителю
+				li
+					a._parent._active(href="#") Услуги
+
+					ul
+						li
+							a._active(href="service.html") Терапия
+						li
+							a(href="service.html") Хирургия
+						li
+							a(href="service.html") Диагностика
+						li
+							a(href="service.html") Ортопедия
+						li
+							a(href="service.html") Профгигиена
+						li
+							a(href="service.html") Для детей
+				li
+					a(href="prices.html") Цены
+				li
+					a(href="reviews.html") Отзывы
+				li
+					a(href="contacts.html") Контакты

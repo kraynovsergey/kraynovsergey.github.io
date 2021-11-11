@@ -1,0 +1,44 @@
+section.section.social
+	.container
+		.social__cols
+			.social__col._left
+				.social__title Остались вопросы?
+					span Пишите — мы всегда на связи!
+				.social__items
+					a(href="#" target="_blank" rel="nofollow")
+						svg(width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg")
+							use(xlink:href="#vkontakte")
+					a(href="#" target="_blank" rel="nofollow")
+						svg(width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg")
+							use(xlink:href="#facebook")
+					a(href="#" target="_blank" rel="nofollow")
+						svg(width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg")
+							rect(width="55" height="55" rx="5" fill="white" fill-opacity="0.15")
+							rect(width="55" height="55" rx="5" fill="url(#paint0_linear)")
+							path(d="M32.9566 14H22.0434C17.6083 14 14 17.6083 14 22.0434V32.9566C14 37.3917 17.6083 41 22.0434 41H32.9566C37.3917 41 41 37.3917 41 32.9566V22.0434C41 17.6083 37.3917 14 32.9566 14ZM38.2838 32.9566C38.2838 35.8987 35.8987 38.2838 32.9566 38.2838H22.0434C19.1013 38.2838 16.7162 35.8987 16.7162 32.9566V22.0434C16.7162 19.1013 19.1013 16.7162 22.0434 16.7162H32.9566C35.8987 16.7162 38.2838 19.1013 38.2838 22.0434V32.9566Z" fill="white")
+							path(d="M27.5005 20.517C23.6499 20.517 20.5173 23.6496 20.5173 27.5001C20.5173 31.3506 23.6499 34.4833 27.5005 34.4833C31.351 34.4833 34.4836 31.3506 34.4836 27.5001C34.4836 23.6496 31.351 20.517 27.5005 20.517ZM27.5005 31.7671C25.1439 31.7671 23.2335 29.8568 23.2335 27.5002C23.2335 25.1436 25.1439 23.2332 27.5005 23.2332C29.857 23.2332 31.7674 25.1436 31.7674 27.5002C31.7674 29.8567 29.857 31.7671 27.5005 31.7671Z" fill="white")
+							path(d="M34.4967 22.2432C35.4208 22.2432 36.17 21.4941 36.17 20.5699C36.17 19.6458 35.4208 18.8966 34.4967 18.8966C33.5725 18.8966 32.8234 19.6458 32.8234 20.5699C32.8234 21.4941 33.5725 22.2432 34.4967 22.2432Z" fill="white")
+							defs
+								linearGradient(id="paint0_linear" x1="7.60638" y1="45.6383" x2="49.1489" y2="12.2872" gradientUnits="userSpaceOnUse")
+									stop(stop-color="#FFE399")
+									stop(offset="0.208333" stop-color="#E0A85E")
+									stop(offset="0.369792" stop-color="#D76A30")
+									stop(offset="0.71875" stop-color="#B0317F")
+									stop(offset="1" stop-color="#3D36BB")
+					a(href="#" target="_blank" rel="nofollow")
+						svg(width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg")
+							use(xlink:href="#odnoklassniki")
+
+			.social__col._right
+				.social__title Оставьте свой номер телефона
+					span и мы вам перезвоним
+
+				form#footer-callback-form.social__form(action="#" method="post")
+					input.social__input.cleave(type="tel" name="phone" placeholder="Ваш телефон")
+					button.btn.social__btn._small(type="submit") Отправить
+
+	.points.social__points._grey
+		- var n = 0;
+		while n < 48
+			span
+			- n = n + 1;

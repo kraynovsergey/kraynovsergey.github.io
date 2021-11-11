@@ -1,0 +1,49 @@
+section.popups
+	#popup-order.hystmodal(aria-hidden="true")
+		.hystmodal__wrap
+			.hystmodal__window(role="dialog" aria-modal="true")
+				.hystmodal__title Оставьте заявку
+				.hystmodal__text Оставьте свои контактные данные и мы свяжемся с вами для обсуждения деталей
+
+				form#order-form.form(action="#" method="post")
+					input(type="hidden" name="service" value="")
+					input(type="hidden" name="doctor" value="")
+					input(type="hidden" name="datetime" value="")
+
+					.form__group
+						input.form__input(type="text" name="name" placeholder="Имя")
+					.form__group
+						input.form__input.cleave-2(type="tel" name="name" placeholder="+7")
+					.form__group
+						textarea.form__textarea(name="message" placeholder="Вопрос")
+
+					.form__group.form__policy
+						input#policy-order(type="checkbox" name="policy" checked)
+						label(for="policy-order")
+							span
+							strong Подтверждаю согласие на
+								a(href="#" target="_blank")  обработку персональных данных
+
+					button.btn.form__btn(type="submit") Оставить заявку
+
+	#popup-callback.hystmodal(aria-hidden="true")
+		.hystmodal__wrap
+			.hystmodal__window(role="dialog" aria-modal="true")
+				.hystmodal__title Обратный звонок
+				.hystmodal__text Оставьте свои контактные данные и мы вам перезвоним
+
+				form#callback-form.form(action="#" method="post")
+
+					.form__group
+						input.form__input(type="text" name="name" placeholder="Имя")
+					.form__group
+						input.form__input.cleave-3(type="tel" name="name" placeholder="+7")
+
+					.form__group.form__policy
+						input#policy-callback(type="checkbox" name="policy" checked)
+						label(for="policy-callback")
+							span
+							strong Подтверждаю согласие на
+								a(href="#" target="_blank")  обработку персональных данных
+
+					button.btn.form__btn(type="submit") Оставить заявку

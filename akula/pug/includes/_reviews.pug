@@ -1,0 +1,41 @@
+section.section.reviews
+	.container
+
+		h2.section__h2.reviews__h2
+			span Мы уже помогли 260 клиентам,
+			| и вот что говорят о нас они сами
+
+		.reviews__carousel
+			.reviews__carousel-init
+				.reviews__item
+					.reviews__item-cols
+						.reviews__item-col.reviews__item-img._left
+							picture
+								source(type="image/webp" srcset="img/tmp/reviews-img.webp")
+								img(src="img/tmp/reviews-img.jpg" alt="")
+						.reviews__item-col._right
+							.reviews__item-text Добрый день, вылетела пломба которую ставила лет 8 назад, обратилась сюда по рекомендации знакомых, сразу все сделали ещё и проконсультировали по другим зубам, отвечали на все вопросы которые интересовали, рассказали про материалы которые используют, в общем теперь и я буду советовать всем своим знакомым! Спасибо.
+							.reviews__item-title Екатерина Олькина
+							.reviews__item-date 02.02.2022
+				.reviews__item
+					.reviews__item-cols
+						.reviews__item-col.reviews__item-img._left
+							picture
+								source(type="image/webp" srcset="img/tmp/reviews-img.webp")
+								img(src="img/tmp/reviews-img.jpg" alt="")
+						.reviews__item-col._right
+							.reviews__item-text Добрый день, вылетела пломба которую ставила лет 8 назад, обратилась сюда по рекомендации знакомых, сразу все сделали ещё и проконсультировали по другим зубам, отвечали на все вопросы которые интересовали, рассказали про материалы которые используют, в общем теперь и я буду советовать всем своим знакомым! Спасибо.
+							.reviews__item-title Екатерина Олькина
+							.reviews__item-date 02.02.2022
+
+			.reviews__controls-wrap
+				.carousel-controls.reviews__controls
+					button.carousel-controls__btn._prev(data-controls="prev")
+						svg(width="53" height="24" viewBox="0 0 53 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+							use(xlink:href="#arrow")
+					button.carousel-controls__btn._next(data-controls="next")
+						svg(width="53" height="24" viewBox="0 0 53 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+							use(xlink:href="#arrow")
+
+	svg.reviews__wave(width="165" height="89" viewBox="0 0 165 89" fill="none" xmlns="http://www.w3.org/2000/svg")
+		use(xlink:href="#wave-grey")
