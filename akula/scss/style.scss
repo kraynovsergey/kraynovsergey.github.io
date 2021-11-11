@@ -1,0 +1,36 @@
+$black: #212529;
+$white: #fff;
+$blue: #45A7F5;
+$grey: #A2ADB8;
+$lightGrey: #F0F2F5;
+$transition: 0.5s ease;
+
+@import "includes/fonts";
+@import "includes/mixin";
+
+@import "includes/default";
+
+@import "includes/carousel";
+@import "includes/header";
+@import "includes/home-banner";
+@import "includes/numbers";
+@import "includes/pluses";
+@import "includes/selection";
+@import "includes/reviews";
+@import "includes/faq";
+@import "includes/about";
+@import "includes/sale";
+@import "includes/present";
+@import "includes/map";
+@import "includes/social";
+@import "includes/footer";
+@import "includes/popup";
+@import "includes/form";
+@import "includes/subheader";
+@import "includes/service";
+@import "includes/text";
+@import "includes/price";
+@import "includes/contacts";
+@import "includes/404";
+@import "includes/licenses";
+@import "includes/doctors";
