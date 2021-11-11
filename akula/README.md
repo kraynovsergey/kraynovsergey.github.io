@@ -1,6 +1,6 @@
 # kraynovsergey.github.io/akula/
 Pages
-- https://kraynovsergey.github.io/akula/index.html
+- https://kraynovsergey.github.io/akula/main.html
 - https://kraynovsergey.github.io/akula/service.html
 - https://kraynovsergey.github.io/akula/reviews.html
 - https://kraynovsergey.github.io/akula/prices.html
