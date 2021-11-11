@@ -1,0 +1,65 @@
+.text {
+	
+	p {
+		margin: 0 0 30px;
+		
+		@media (max-width: 991px) {
+			margin-bottom: 15px;
+		}
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	
+	& a {
+		@include transition($transition);
+		
+		&:hover {
+			color: $black;
+		}
+	}
+	
+	ul,
+	ol {
+		margin: 0 0 30px 40px;
+		
+		@media (max-width: 991px) {
+			margin: 0 0 15px 20px;
+		}
+	}
+	
+	h2 {
+		font-size: 28px;
+		line-height: 32px;
+		padding: 0;
+		margin: 0 0 30px;
+		font-weight: bold;
+		
+		@media (max-width: 991px) {
+			font-size: 24px;
+			line-height: 28px;
+			margin-bottom: 15px;
+		}
+	}
+	
+	h3 {
+		font-size: 22px;
+		line-height: 26px;
+		padding: 0;
+		margin: 0 0 30px;
+		font-weight: bold;
+		
+		@media (max-width: 991px) {
+			font-size: 20px;
+			line-height: 24px;
+			margin-bottom: 15px;
+		}
+	}
+	
+	& img {
+		display: block;
+		margin: 0 auto;
+		max-width: 100%;
+	}
+}

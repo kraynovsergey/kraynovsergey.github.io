@@ -1,0 +1,161 @@
+.social {
+	border-top: 1px solid $lightGrey;
+	position: relative;
+	
+	& .container {
+		position: relative;
+		z-index: 2;
+	}
+	
+	&__cols {
+		@include flex;
+		
+		@media (max-width: 768px) {
+			@include flex-direction(column);
+		}
+	}
+	
+	&__col {
+		width: 50%;
+		
+		@media (max-width: 768px) {
+			width: 100% !important;
+		}
+		
+		&._left {
+			border-right: 1px solid $lightGrey;
+			padding-right: 60px;
+			
+			@media (max-width: 1199px) {
+				padding-right: 30px;
+			}
+			
+			@media (max-width: 768px) {
+				border-right: 0;
+				border-bottom: 1px solid $lightGrey;
+				padding-right: 0;
+				padding-bottom: 30px;
+			}
+		}
+		
+		&._right {
+			padding-left: 60px;
+			
+			@media (max-width: 1199px) {
+				padding-left: 30px;
+			}
+			
+			@media (max-width: 768px) {
+				padding-left: 0;
+				padding-top: 30px;
+			}
+		}
+	}
+	
+	&__title {
+		font-size: 32px;
+		line-height: 40px;
+		margin-bottom: 30px;
+		
+		@media (max-width: 1199px) {
+			font-size: 28px;
+			line-height: 34px;
+		}
+		
+		@media (max-width: 991px) {
+			font-size: 24px;
+			line-height: 30px;
+			margin-bottom: 20px;
+		}
+		
+		@media (max-width: 768px) {
+			text-align: center;
+			font-size: 20px;
+			line-height: 24px;
+		}
+		
+		& span {
+			display: block;
+		}
+	}
+	
+	&__items {
+		@include flex;
+		@include align-items(center);
+		
+		@media (max-width: 768px) {
+			@include justify-content(center);
+		}
+		
+		& a {
+			margin-right: 30px;
+			
+			@media (max-width: 768px) {
+				margin: 0 12px !important;
+			}
+			
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	
+	&__form {
+		@include flex;
+	}
+	
+	&__input {
+		@include flex-grow(1);
+		@include border-radius(5px);
+		@include transition($transition);
+		border: 1px solid $grey;
+		border-right: 0;
+		height: 55px;
+		line-height: 53px;
+		background: $white;
+		font-size: 14px;
+		color: $black;
+		padding: 0 20px;
+		position: relative;
+		z-index: 2;
+		
+		&::-webkit-input-placeholder {
+			color: $grey;
+		}
+		
+		&::-moz-placeholder {
+			color: $grey;
+		}
+		
+		&.error {
+			background: #ffeef3;
+		}
+	}
+	
+	&__btn {
+		@include border-radius(0 5px 5px 0);
+		height: 55px !important;
+		line-height: 55px !important;
+		position: relative;
+		left: -5px;
+		width: 155px;
+		padding: 0;
+		z-index: 1;
+		font-size: 20px !important;
+		
+		@media (max-width: 991px) {
+			font-size: 14px !important;
+		}
+	}
+	
+	&__points {
+		position: absolute;
+		right: 130px;
+		top: calc(50% - 105px);
+		z-index: 1;
+		
+		@media (max-width: 1750px) {
+			display: none;
+		}
+	}
+}

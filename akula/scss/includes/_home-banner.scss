@@ -1,0 +1,150 @@
+.home-banner {
+	padding: 100px 0 60px;
+	overflow: hidden;
+	position: relative;
+	
+	@media (max-width: 991px) {
+		padding: 50px 0 30px;
+	}
+	
+	@media (max-width: 768px) {
+		padding-bottom: 0;
+	}
+	
+	& .container {
+		position: relative;
+	}
+	
+	&__carousel {
+		max-width: 450px;
+		position: relative;
+		z-index: 2;
+		
+		&-controls {
+			margin-top: 120px;
+			
+			@media (max-width: 991px) {
+				margin-top: 60px;
+			}
+			
+			@media (max-width: 576px) {
+				margin-top: 30px;
+			}
+		}
+		
+		&-controls-init {
+			display: none;
+		}
+		
+		&-nav {
+			position: relative;
+			top: 2px;
+		}
+	}
+	
+	&__item {
+		
+		&-subtitle {
+			font-size: 12px;
+			color: $grey;
+			font-weight: bold;
+			margin-bottom: 30px;
+			text-transform: uppercase;
+			
+			@media (max-width: 991px) {
+				margin-bottom: 20px;
+			}
+		}
+		
+		&-title {
+			margin-bottom: 30px;
+			
+			@media (max-width: 991px) {
+				margin-bottom: 20px;
+			}
+		}
+		
+		&-text {
+			margin-bottom: 60px;
+			
+			@media (max-width: 991px) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+	
+	&__img {
+		position: absolute;
+		bottom: -60px;
+		right: 0;
+		z-index: 1;
+		
+		@media (max-width: 768px) {
+			position: relative;
+			bottom: 0;
+			margin-top: -140px;
+			text-align: right;
+		}
+		
+		@media (max-width: 576px) {
+			margin-top: 50px;
+		}
+		
+		& img {
+			position: relative;
+			z-index: 2;
+			max-width: 100%;
+			
+			@media (max-width: 991px) {
+				max-height: 400px;
+			}
+		}
+		
+		&-circle {
+			@include border-radius(50%);
+			width: 600px;
+			height: 600px;
+			position: absolute;
+			right: -40px;
+			bottom: -90px;
+			background: $blue;
+			z-index: 1;
+			
+			@media (max-width: 991px) {
+				width: 380px;
+				height: 380px;
+			}
+		}
+		
+		&-wave {
+			position: absolute;
+			left: -87px;
+			top: 204px;
+			z-index: 3;
+			
+			@media (max-width: 991px) {
+				display: none;
+			}
+		}
+	}
+	
+	&__wave {
+		position: absolute;
+		top: 98px;
+		right: 149px;
+		
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+	
+	&__points {
+		position: absolute;
+		left: 130px;
+		top: 144px;
+		
+		@media (max-width: 1765px) {
+			display: none;
+		}
+	}
+}

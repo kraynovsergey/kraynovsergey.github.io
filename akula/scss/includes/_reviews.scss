@@ -1,0 +1,166 @@
+.reviews {
+	position: relative;
+	
+	& .container {
+		position: relative;
+		z-index: 2;
+	}
+	
+	&__h2 {
+		text-align: center;
+		margin-bottom: 60px;
+		
+		@media (max-width: 991px) {
+			margin-bottom: 30px;
+		}
+	}
+	
+	&__carousel {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+	
+	&__item {
+		
+		&-cols {
+			@include flex;
+			
+			@media (max-width: 576px) {
+				@include flex-direction(column);
+			}
+		}
+		
+		&-page {
+			margin-bottom: 60px;
+			border-bottom: 1px solid $lightGrey;
+			padding-bottom: 60px;
+			
+			@media (max-width: 991px) {
+				margin-bottom: 30px;
+				padding-bottom: 30px;
+			}
+		}
+		
+		&-col {
+			padding: 0 30px;
+			
+			@media (max-width: 991px) {
+				padding: 0 15px;
+			}
+			
+			@media (max-width: 576px) {
+				padding: 0;
+				width: 100% !important;
+			}
+			
+			&._left {
+				width: 30%;
+				
+				@media (max-width: 576px) {
+					margin-bottom: 20px;
+				}
+			}
+			
+			&._right {
+				width: 70%;
+			}
+		}
+		
+		&-img {
+			
+			& img {
+				@include border-radius(50%);
+				max-width: 100%;
+				display: block;
+				
+				@media (max-width: 576px) {
+					margin: 0 auto;
+					max-width: 70%;
+				}
+			}
+		}
+		
+		&-text {
+			font-size: 24px;
+			line-height: 32px;
+			margin-bottom: 40px;
+			
+			@media (max-width: 991px) {
+				font-size: 18px;
+				line-height: 22px;
+				margin-bottom: 20px;
+			}
+		}
+		
+		&-title {
+			font-size: 20px;
+			line-height: 22px;
+			font-weight: 600;
+			margin-bottom: 15px;
+			
+			@media (max-width: 991px) {
+				font-size: 16px;
+				line-height: 18px;
+				margin-bottom: 10px;
+			}
+		}
+		
+		&-date {
+			font-size: 16px;
+			line-height: 18px;
+			font-weight: 500;
+			color: $grey;
+			
+			@media (max-width: 991px) {
+				font-size: 14px;
+				line-height: 16px;
+			}
+		}
+	}
+	
+	&__controls-wrap {
+		@include flex;
+		@include justify-content(flex-end);
+		margin-top: 60px;
+		
+		@media (max-width: 991px) {
+			margin-top: 30px;
+		}
+	}
+	
+	&__controls {
+		padding: 0 30px;
+		width: 70%;
+		
+		@media (max-width: 991px) {
+			padding: 0 15px;
+		}
+		
+		@media (max-width: 576px) {
+			padding: 0;
+			width: 100%;
+		}
+		
+		& ._next {
+			@media (max-width: 991px) {
+				position: relative;
+				top: 1px;
+			}
+		}
+	}
+	
+	&__wave {
+		position: absolute;
+		z-index: 1;
+		right: 149px;
+		top: 300px;
+		
+		@media (max-width: 1550px) {
+			display: none;
+		}
+	}
+	
+	&__btn {
+		text-align: center;
+	}
+}

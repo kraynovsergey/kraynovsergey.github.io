@@ -1,0 +1,44 @@
+.carousel-controls {
+	@include flex;
+	@include align-items(center);
+	
+	&__btn {
+		
+		&._prev {
+			margin-right: 15px;
+		}
+		
+		&._next {
+			@include transform(rotate(180deg));
+			margin-left: 15px;
+			position: relative;
+			top: 4px;
+			
+			@media (max-width: 991px) {
+				position: relative;
+				top: 1px;
+			}
+		}
+	}
+}
+
+.carousel-nav {
+	@include flex;
+	@include align-items(center);
+	
+	&__btn {
+		@include transition($transition);
+		width: 20px;
+		height: 2px;
+		background: $grey;
+		margin-right: 15px;
+		
+		&:last-child {
+			margin-right: 0;
+		}
+		
+		&.tns-nav-active {
+			background: $blue;
+		}
+	}
+}

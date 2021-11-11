@@ -1,0 +1,290 @@
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 10;
+	background: $white;
+	
+	& .container {
+		@include flex;
+		@include align-items(center);
+		@include justify-content(space-between);
+		height: 90px;
+		
+		@media (max-width: 991px) {
+			height: 70px;
+		}
+	}
+	
+	&__nav {
+		@include flex;
+		@include align-items(center);
+		margin: 15px 0 0;
+		padding: 0;
+		list-style: none;
+		
+		@media (max-width: 991px) {
+			display: none;
+		}
+		
+		& li {
+			font-size: 16px;
+			color: $grey;
+			margin-right: 30px;
+			position: relative;
+			padding-bottom: 15px;
+			
+			@media (max-width: 1199px) {
+				margin-right: 15px;
+			}
+			
+			&:last-child {
+				margin-right: 0;
+			}
+			
+			&:hover {
+				
+				& ul {
+					@include flex;
+				}
+			}
+			
+			& a {
+				@include transition($transition);
+				color: inherit;
+				text-decoration: none;
+				
+				&:hover,
+				&._active {
+					color: $black;
+				}
+			}
+			
+			& ul {
+				@include flex-direction(column);
+				@include align-items(flex-start);
+				@include border-radius(5px);
+				display: none;
+				list-style: none;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				background: $white;
+				border: 1px solid $lightGrey;
+				padding: 25px 30px 25px 15px;
+				
+				& li {
+					white-space: nowrap;
+					margin-right: 0;
+					margin-bottom: 20px;
+					padding-bottom: 0;
+					
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+	
+	&__phone {
+		@include flex;
+		@include flex-direction(column);
+		@include align-items(flex-end);
+	}
+	
+	&__phone-link {
+		@include transition($transition);
+		font-size: 20px;
+		line-height: 22px;
+		font-weight: 300;
+		color: $black;
+		text-decoration: none;
+		
+		@media (max-width: 1199px) {
+			font-size: 18px;
+			line-height: 20px;
+		}
+		
+		&:hover {
+			color: $blue;
+		}
+		
+		& span {
+			@media (max-width: 576px) {
+				display: none;
+			}
+		}
+		
+		& svg {
+			display: none;
+			
+			@media (max-width: 576px) {
+				display: block;
+			}
+		}
+	}
+	
+	&__callback {
+		@include transition($transition);
+		font-size: 12px;
+		color: $grey;
+		
+		@media (max-width: 768px) {
+			display: none;
+		}
+		
+		&:hover {
+			color: $blue;
+		}
+	}
+	
+	&__btn {
+		padding: 0 15px;
+		
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+	
+	&__burger {
+		@include transition($transition);
+		display: none;
+		position: relative;
+		
+		@media (max-width: 991px) {
+			@include flex;
+			@include flex-direction(column);
+		}
+		
+		&._active {
+			width: 30px;
+			height: 30px;
+			
+			& span {
+				position: absolute;
+				top: 50%;
+				
+				&:first-child {
+					@include transform(rotate(45deg));
+				}
+				
+				&:nth-child(2) {
+					@include transform(rotate(-45deg));
+				}
+				
+				&:last-child {
+					display: none;
+				}
+			}
+		}
+		
+		& span {
+			@include transition($transition);
+			width: 30px;
+			height: 2px;
+			background: $black;
+			margin-bottom: 5px;
+			
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+	&__mobile {
+		@include flex;
+		@include transition($transition);
+		position: absolute;
+		max-width: 80vw;
+		left: -100%;
+		border-top: 1px solid $lightGrey;
+		
+		&._active {
+			position: relative;
+			left: 0;
+			max-width: 100vw;
+		}
+		
+		& .container {
+			height: auto !important;
+		}
+		
+		&-nav {
+			padding: 20px 0;
+			margin: 0;
+			list-style: none;
+			@include flex;
+			@include flex-direction(column);
+			
+			& li {
+				font-size: 16px;
+				margin-bottom: 15px;
+				color: $grey;
+				
+				&:last-child {
+					margin-bottom: 0;
+				}
+				
+				& a {
+					@include transition($transition);
+					text-decoration: none;
+					color: inherit;
+					
+					&._active {
+						color: $black;
+					}
+				}
+				
+				& ul {
+					@include flex;
+					@include flex-wrap(wrap);
+					margin: 25px 0 0;
+					padding: 0;
+					list-style: none;
+					
+					& li {
+						@include border-radius(5px);
+						height: 30px;
+						line-height: 30px;
+						padding: 0 10px;
+						background: $lightGrey;
+						margin: 0 15px 15px 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+.logo {
+	@include flex;
+	@include align-items(center);
+	color: $black !important;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 800;
+	
+	@media (max-width: 1199px) {
+		font-size: 16px;
+	}
+	
+	& img {
+		margin-right: 10px;
+		max-height: 60px;
+		
+		@media (max-width: 991px) {
+			max-height: 50px;
+		}
+	}
+	
+	& span {
+		@include flex;
+		@include flex-direction(column);
+		line-height: 120%;
+		
+		& strong {
+			color: $blue;
+		}
+	}
+}

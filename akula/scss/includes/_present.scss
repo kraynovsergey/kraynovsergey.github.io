@@ -1,0 +1,92 @@
+.present {
+	position: relative;
+	
+	&__box-wrap {
+		position: relative;
+	}
+	
+	&__points {
+		position: absolute;
+		z-index: 1;
+		left: -70px;
+		top: -70px;
+		
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+	
+	&__box {
+		@include border-radius(10px);
+		@include flex;
+		@include align-items(center);
+		background: $lightGrey;
+		padding: 90px;
+		position: relative;
+		z-index: 2;
+		
+		@media (max-width: 991px) {
+			padding: 30px;
+		}
+		
+		@media (max-width: 576px) {
+			@include flex-direction(column);
+			padding: 20px;
+			text-align: center;
+		}
+	}
+	
+	&__col {
+		
+		@media (max-width: 576px) {
+			width: 100% !important;
+		}
+		
+		&._left {
+			width: 70%;
+			
+			@media (max-width: 576px) {
+				margin-bottom: 30px;
+			}
+		}
+		
+		&._right {
+			width: 30%;
+			
+			& svg {
+				max-width: 100%;
+				height: auto;
+				
+				@media (max-width: 576px) {
+					max-width: 60%;
+				}
+			}
+		}
+	}
+	
+	&__h2 {
+		margin-bottom: 40px;
+		font-size: 50px;
+		line-height: 56px;
+		
+		@media (max-width: 1199px) {
+			font-size: 40px;
+			line-height: 46px;
+		}
+		
+		@media (max-width: 991px) {
+			font-size: 30px;
+			line-height: 36px;
+			margin-bottom: 20px;
+		}
+		
+		@media (max-width: 768px) {
+			font-size: 24px;
+			line-height: 30px;
+		}
+	}
+	
+	&__btn {
+		padding: 0 25px;
+	}
+}

@@ -1,0 +1,51 @@
+.licenses {
+	
+	&__cols {
+		@include flex;
+		@include flex-wrap(wrap);
+		margin: 0 -15px;
+	}
+	
+	&__item {
+		padding: 0 15px;
+		width: 25%;
+		margin-bottom: 30px;
+		
+		@media (max-width: 991px) {
+			width: 33.33%;
+		}
+		
+		@media (max-width: 768px) {
+			width: 50%;
+		}
+		
+		& a {
+			@include flex;
+			@include flex-direction(column);
+			@include align-items(center);
+			text-decoration: none;
+			color: $black;
+			
+			&:hover {
+				color: $blue;
+				
+				& img {
+					border: 2px solid $blue;
+				}
+			}
+		}
+		
+		& img {
+			@include transition($transition);
+			@include border-radius(5px);
+			margin-bottom: 15px;
+			border: 2px solid $grey;
+		}
+		
+		& span {
+			@include transition($transition);
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+}
