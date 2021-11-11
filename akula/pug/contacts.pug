@@ -1,0 +1,85 @@
+doctype html
+html(lang="ru")
+	head
+		- var seo = {title: 'Контакты', description: 'Описание страницы контактов', keywords: 'Ключи страницы контактов'}
+		include includes/_meta.pug
+	body
+		include includes/_header.pug
+
+		main.main
+
+			section.subheader
+				.section.subheader__overflow._blue
+					.container
+						.subheader__back
+							a(href="") Главная
+								svg(width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+									path(d="M12 6L3 6M6 10L2 6L6 2" stroke="white" stroke-width="2" stroke-linecap="square")
+
+						h1.subheader__h1 Контакты
+
+						.contacts
+							.contacts__item
+								.contacts__title Бесплатная консультация:
+								a.contacts__value._link(href="tel:") 8 (4922) 44 68 15
+								a.contacts__value._link(href="tel:") 8 (4922) 46 24 54
+								a.contacts__value._link(href="tel:") 8 (901) 192 24 54
+							.contacts__item
+								.contacts__title Адрес клиники:
+								.contacts__value г. Владимир, ул. Юбилейная, д.15
+							.contacts__item
+								.contacts__title Режим работы:
+								.contacts__value пн-вс с 09:00 до 21:00
+							.contacts__item
+								.contacts__title E-mail:
+								a.contacts__value._link(href="mailto:") denta-classik@mail.ru
+
+					svg.section__blue-box._bottom(width="1058" height="405" viewBox="0 0 1058 405" fill="none" xmlns="http://www.w3.org/2000/svg")
+						use(xlink:href="#section-blue")
+					svg.section__blue-box._top(width="1058" height="405" viewBox="0 0 1058 405" fill="none" xmlns="http://www.w3.org/2000/svg")
+						use(xlink:href="#section-blue")
+
+			section.section.about.requisites._nopb
+				.container
+					.about__cols
+						.about__col._left
+							h2.requisites__h2  Наши реквизиты
+							.about__text.requisites__text
+								p
+									strong Общество с ограниченной ответственностью "Акула плюс"
+								p
+									strong ООО "Акула плюс" (Стоматология АКУЛА)
+								p
+									strong ОГРН:
+									|  1153340003101
+								p
+									strong ИНН:
+									|  3329081827
+								p
+									strong КПП:
+									|  332901001
+								p
+									strong Юридический адрес:
+									|  600031,г.Владимир,ул.Юбилейная,д.15
+								p
+									strong Фактический адрес:
+									|  600031,г.Владимир,ул.Юбилейная,д.15
+						.about__col._right
+							.about__img
+								picture
+									source(type="image/webp" srcset="img/shark.webp")
+									img(src="img/shark.png" alt="Стоматологическая клиника Акула")
+								.about__img-circle
+								.points.about__points
+									- var n = 0;
+									while n < 48
+										span
+										- n = n + 1;
+
+			include includes/_map.pug
+			include includes/_social.pug
+
+		include includes/_footer.pug
+		include includes/_svg.pug
+		include includes/_popup.pug
+		include includes/_scripts.pug

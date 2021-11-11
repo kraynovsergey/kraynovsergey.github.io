@@ -1,0 +1,108 @@
+doctype html
+html(lang="ru")
+	head
+		- var seo = {title: 'Услуга', description: 'Описание страницы услуги', keywords: 'Ключи страницы услуги'}
+		include includes/_meta.pug
+	body
+		include includes/_header.pug
+
+		main.main
+
+			section.subheader
+				.section.subheader__overflow._blue
+					.container
+						.subheader__back
+							a(href="") Главная
+								svg(width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+									path(d="M12 6L3 6M6 10L2 6L6 2" stroke="white" stroke-width="2" stroke-linecap="square")
+
+						h1.subheader__h1 Терапевтическая стоматология
+
+					svg.section__blue-box._bottom(width="1058" height="405" viewBox="0 0 1058 405" fill="none" xmlns="http://www.w3.org/2000/svg")
+						use(xlink:href="#section-blue")
+					svg.section__blue-box._top(width="1058" height="405" viewBox="0 0 1058 405" fill="none" xmlns="http://www.w3.org/2000/svg")
+						use(xlink:href="#section-blue")
+
+				picture
+					source(type="image/webp" srcset="img/subheader.webp")
+					img.subheader__img(src="img/subheader.png" alt="")
+
+			section.section.service-page
+				.container
+					.service-page__cols
+						.service-page__col._left
+							.service-page__title._black Лечение
+							.service-page__title Кариеса зубов
+							.service-page__title Пульпита зубов
+							.service-page__title Периодонтита
+
+							picture
+								source(type="image/webp" srcset="img/tooth.webp")
+								img.service-page__img(src="img/tooth.png" alt="")
+						.service-page__col._right
+							.text
+								p Только небольшой процент населения тщательно следит за состоянием своих зубов с обязательными консультациями у врача-стоматолога. Большая часть наших будущих пациентов старается сделать это самостоятельно, но при этом могут выбрать некачественную щетку и зубную пасту, неправильно чистить.
+								p Пища и общие заболевания тела, а так же плохая экология ведут к разрушению зубов любого человека. Врачи стоматологии "Акула" предлагают высококвалифицированную консультацию по уходу за Вашими зубами.
+								p Терапевтическая стоматология - одно из самых главных направлений в стоматологической практике. Только высокообразованный терапевт-стоматолог сразу заметит проблему каждого зуба, даже если по Вашему мнению - все зубы идеальны. Качественная диагностика позволит выявить первые признаки разрушения зуба, камни и т.д. и назначить эффективное лечение, то есть как можно дольше сохранить Ваши зубы.
+								p Но, как показывает практика первый раз к стоматологу люди приходят уже с запущенными проблемами зубов. И поэтому современная стоматология развивается очень быстро усовершенствуя бормашины, кресла для пациента, инструменты, материалы для пломбы. Нашим пациентам в стоматологии "Акула" всегда будет уютно и комфортно во время лечения.
+
+								.service-page__btn
+									button.btn._middle(type="button" data-hystmodal="#popup-order") Записаться на прием
+
+			section.section._nopt.price
+				.container
+					h2.section__h2.price__h2 Цена
+						span  на услуги
+
+					.price__item
+						.price__title
+							p Протезирование All-on-4 на имплантах
+								strong  Alpha Bio (Израиль)
+								|  с протезом
+						.price__price._best
+							.price__best Лучшая цена
+							.price__value 130 000
+								em.rouble i
+
+					.price__item
+						.price__title
+							p Протезирование All-on-4 на имплантах
+								strong  Osstem (Южная Корея)
+								|  с протезом
+						.price__price
+							.price__value 195 400
+								em.rouble i
+
+					.price__item
+						.price__title
+							p Протезирование All-on-4 на имплантах
+								strong  Ankylos (Германия)
+								|  с протезом
+						.price__price
+							.price__oldprice 349 400
+								em.rouble i
+							.price__value 314 400
+								em.rouble i
+
+					.price__item
+						.price__title
+							p Протезирование All-on-4 на имплантах
+								strong  Nobel (Швейцария)
+								|  с протезом
+						.price__price
+							.price__oldprice 529 000
+								em.rouble i
+							.price__value 472 600
+								em.rouble i
+
+			include includes/_faq.pug
+			include includes/_reviews.pug
+			include includes/_sale.pug
+			include includes/_present.pug
+			include includes/_map.pug
+			include includes/_social.pug
+
+		include includes/_footer.pug
+		include includes/_svg.pug
+		include includes/_popup.pug
+		include includes/_scripts.pug

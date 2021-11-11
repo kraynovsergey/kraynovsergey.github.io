@@ -1,0 +1,51 @@
+doctype html
+html(lang="ru")
+	head
+		- var seo = {title: 'Лицензии', description: 'Описание страницы лицензий', keywords: 'Ключи страницы лицензий'}
+		include includes/_meta.pug
+	body
+		include includes/_header.pug
+
+		main.main
+
+			section.subheader._small
+				.section.subheader__overflow._blue
+					.container
+						.subheader__back
+							a(href="") Главная
+								svg(width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+									path(d="M12 6L3 6M6 10L2 6L6 2" stroke="white" stroke-width="2" stroke-linecap="square")
+
+						h1.subheader__h1 Лицензии
+
+					svg.section__blue-box._bottom(width="1058" height="405" viewBox="0 0 1058 405" fill="none" xmlns="http://www.w3.org/2000/svg")
+						use(xlink:href="#section-blue")
+					svg.section__blue-box._top(width="1058" height="405" viewBox="0 0 1058 405" fill="none" xmlns="http://www.w3.org/2000/svg")
+						use(xlink:href="#section-blue")
+
+			section.section.licenses.text
+				.container
+					.licenses__cols
+						- var n = 0;
+						while n < 8
+							.licenses__item
+								a(href="img/tmp/license-big.jpg" data-fslightbox="licenses")
+									picture
+										source(type="image/webp" srcset="img/tmp/license-small.webp")
+										img(src="img/tmp/license-small.jpg" alt="")
+									span Сертификат по специальности "Стоматология общей практики", действителен до 6.07.2022
+							- n = n + 1;
+
+
+
+			include includes/_faq.pug
+			include includes/_reviews.pug
+			include includes/_sale.pug
+			include includes/_present.pug
+			include includes/_map.pug
+			include includes/_social.pug
+
+		include includes/_footer.pug
+		include includes/_svg.pug
+		include includes/_popup.pug
+		include includes/_scripts.pug

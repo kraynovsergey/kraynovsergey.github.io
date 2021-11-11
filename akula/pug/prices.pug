@@ -1,0 +1,126 @@
+doctype html
+html(lang="ru")
+	head
+		- var seo = {title: 'Цены', description: 'Описание страницы цен', keywords: 'Ключи страницы цен'}
+		include includes/_meta.pug
+	body
+		include includes/_header.pug
+
+		main.main
+
+			section.subheader._small
+				.section.subheader__overflow._blue
+					.container
+						.subheader__back
+							a(href="") Главная
+								svg(width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+									path(d="M12 6L3 6M6 10L2 6L6 2" stroke="white" stroke-width="2" stroke-linecap="square")
+
+						h1.subheader__h1 Цены
+
+					svg.section__blue-box._bottom(width="1058" height="405" viewBox="0 0 1058 405" fill="none" xmlns="http://www.w3.org/2000/svg")
+						use(xlink:href="#section-blue")
+					svg.section__blue-box._top(width="1058" height="405" viewBox="0 0 1058 405" fill="none" xmlns="http://www.w3.org/2000/svg")
+						use(xlink:href="#section-blue")
+
+			section.section.price
+				.container
+					h2.section__h2.price__h2 Терапия
+
+					.price__item
+						.price__title
+							p Протезирование All-on-4 на имплантах
+								strong  Alpha Bio (Израиль)
+								|  с протезом
+						.price__price._best
+							.price__best Лучшая цена
+							.price__value 130 000
+								em.rouble i
+
+					.price__item
+						.price__title
+							p Протезирование All-on-4 на имплантах
+								strong  Osstem (Южная Корея)
+								|  с протезом
+						.price__price
+							.price__value 195 400
+								em.rouble i
+
+					.price__item
+						.price__title
+							p Протезирование All-on-4 на имплантах
+								strong  Ankylos (Германия)
+								|  с протезом
+						.price__price
+							.price__oldprice 349 400
+								em.rouble i
+							.price__value 314 400
+								em.rouble i
+
+					.price__item
+						.price__title
+							p Протезирование All-on-4 на имплантах
+								strong  Nobel (Швейцария)
+								|  с протезом
+						.price__price
+							.price__oldprice 529 000
+								em.rouble i
+							.price__value 472 600
+								em.rouble i
+
+			section.section.price._nopt
+				.container
+					h2.section__h2.price__h2 Хирургия
+
+					.price__item
+						.price__title
+							p Протезирование All-on-4 на имплантах
+								strong  Alpha Bio (Израиль)
+								|  с протезом
+						.price__price._best
+							.price__best Лучшая цена
+							.price__value 130 000
+								em.rouble i
+
+					.price__item
+						.price__title
+							p Протезирование All-on-4 на имплантах
+								strong  Osstem (Южная Корея)
+								|  с протезом
+						.price__price
+							.price__value 195 400
+								em.rouble i
+
+					.price__item
+						.price__title
+							p Протезирование All-on-4 на имплантах
+								strong  Ankylos (Германия)
+								|  с протезом
+						.price__price
+							.price__oldprice 349 400
+								em.rouble i
+							.price__value 314 400
+								em.rouble i
+
+					.price__item
+						.price__title
+							p Протезирование All-on-4 на имплантах
+								strong  Nobel (Швейцария)
+								|  с протезом
+						.price__price
+							.price__oldprice 529 000
+								em.rouble i
+							.price__value 472 600
+								em.rouble i
+
+			include includes/_faq.pug
+			include includes/_reviews.pug
+			include includes/_sale.pug
+			include includes/_present.pug
+			include includes/_map.pug
+			include includes/_social.pug
+
+		include includes/_footer.pug
+		include includes/_svg.pug
+		include includes/_popup.pug
+		include includes/_scripts.pug

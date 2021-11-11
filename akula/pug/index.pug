@@ -1,0 +1,267 @@
+doctype html
+html(lang="ru")
+	head
+		- var seo = {title: 'Главная страница', description: 'Описание главной страницы', keywords: 'Ключи главной страницы'}
+		include includes/_meta.pug
+	body
+		include includes/_header.pug
+
+		main.main
+
+			section.section._grey.home-banner
+				.container
+					.home-banner__carousel
+						.home-banner__carousel-init
+							.home-banner__item
+								.home-banner__item-subtitle Спецпредложение
+								h2.section__h2.home-banner__item-title Комплексная чистка зубов
+									span  скидка 30%
+								.home-banner__item-text Отличное предложение на профессиональную чистку + ультразвук = всего 2 500 р. вместо 5 000 р.!
+								button.btn._big.home-banner__item-btn(type="submit" data-hystmodal="#popup-order" data-subject="Комплексная чистка зубов - скидка 30%") Записаться
+							.home-banner__item
+								.home-banner__item-subtitle Спецпредложение
+								h2.section__h2.home-banner__item-title Комплексная чистка зубов
+									span  скидка 30%
+								.home-banner__item-text Отличное предложение на профессиональную чистку + ультразвук = всего 2 500 р. вместо 5 000 р.!
+								button.btn._big.home-banner__item-btn(type="submit" data-hystmodal="#popup-order" data-subject="Комплексная чистка зубов - скидка 30%") Записаться
+							.home-banner__item
+								.home-banner__item-subtitle Спецпредложение
+								h2.section__h2.home-banner__item-title Комплексная чистка зубов
+									span  скидка 30%
+								.home-banner__item-text Отличное предложение на профессиональную чистку + ультразвук = всего 2 500 р. вместо 5 000 р.!
+								button.btn._big.home-banner__item-btn(type="submit" data-hystmodal="#popup-order" data-subject="Комплексная чистка зубов - скидка 30%") Записаться
+
+						.carousel-controls.home-banner__carousel-controls
+							button.carousel-controls__btn._prev(data-controls="prev")
+								svg(width="53" height="24" viewBox="0 0 53 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+									use(xlink:href="#arrow")
+							.carousel-nav.home-banner__carousel-nav
+								button.carousel-nav__btn(type="button")
+								button.carousel-nav__btn(type="button")
+								button.carousel-nav__btn(type="button")
+							button.carousel-controls__btn._next(data-controls="next")
+								svg(width="53" height="24" viewBox="0 0 53 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+									use(xlink:href="#arrow")
+
+						.home-banner__carousel-controls-init
+							button._prev(data-controls="prev")
+							button._next(data-controls="next")
+
+					.home-banner__img
+						picture
+							source(type="image/webp" srcset="img/home-banner-img.webp")
+							img(src="img/home-banner-img.png" alt="")
+						.home-banner__img-circle
+						svg.home-banner__img-wave(width="166" height="89" viewBox="0 0 166 89" fill="none" xmlns="http://www.w3.org/2000/svg")
+							use(xlink:href="#wave")
+				svg.home-banner__wave(width="166" height="89" viewBox="0 0 166 89" fill="none" xmlns="http://www.w3.org/2000/svg")
+					use(xlink:href="#wave")
+				.points.home-banner__points
+					- var n = 0;
+					while n < 48
+						span
+						- n = n + 1;
+
+			section.numbers
+				.container
+					.numbers__item 15
+						span сотрудников
+					.numbers__item 2010 г.
+						span работаем
+					.numbers__item 150
+						span пациентов
+					.numbers__item 300
+						span имплантов
+
+			section.section.pluses
+				.container
+					.pluses__item
+						img(src="img/tmp/pluses-1.svg" alt="")
+						span Есть рассрочка
+					.pluses__item
+						img(src="img/tmp/pluses-2.svg" alt="")
+						span Экономные цены
+					.pluses__item
+						img(src="img/tmp/pluses-3.svg" alt="")
+						span Качественная работа
+					.pluses__item
+						img(src="img/tmp/pluses-4.svg" alt="")
+						span Гарантия год
+
+			section.section._grey.selection
+				.container
+					h2.section__h2.selection__h2
+						span Подберем стоматолога,
+						| с которым вам будет комфортно
+
+					.selection__stages
+						button.selection__stage._stage-1
+							span.selection__stage-circle
+							| 1. Выбрать услугу
+						button.selection__stage._stage-2(disabled)
+							span.selection__stage-circle
+							| 2. Выбрать специалиста
+						button.selection__stage._stage-3(disabled)
+							span.selection__stage-circle
+							| 3. Выберите время консультации
+
+					.selection__box
+						.selection__box-content
+							.selection__step._step-1._active
+								.carousel-controls.selection__controls
+									button.carousel-controls__btn.selection__control._next(data-hide=".selection__step._step-1" data-link=".selection__step._step-2" data-stage-add=".selection__stage._stage-2" disabled)
+										svg(height="24" viewBox="0 0 53 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+											path(d="M12 2L2 12M2 12L12 22M2 12L52 12" stroke="#45A7F5" stroke-width="2" stroke-linecap="square")
+
+								.selection__title Что бы вы хотели обсудить?
+								.selection__services
+									.selection__service
+										input#selection-service-1.selection__service-input(type="radio" name="selection_service" value="Терапия")
+										label.selection__service-label(for="selection-service-1") Терапия
+									.selection__service
+										input#selection-service-2.selection__service-input(type="radio" name="selection_service" value="Хирургия")
+										label.selection__service-label(for="selection-service-2") Хирургия
+									.selection__service
+										input#selection-service-3.selection__service-input(type="radio" name="selection_service" value="Диагностика")
+										label.selection__service-label(for="selection-service-3") Диагностика
+									.selection__service
+										input#selection-service-4.selection__service-input(type="radio" name="selection_service" value="Ортопедия")
+										label.selection__service-label(for="selection-service-4") Ортопедия
+									.selection__service
+										input#selection-service-5.selection__service-input(type="radio" name="selection_service" value="Профгигиена")
+										label.selection__service-label(for="selection-service-5") Профгигиена
+									.selection__service
+										input#selection-service-6.selection__service-input(type="radio" name="selection_service" value="Для детей")
+										label.selection__service-label(for="selection-service-6") Для детей
+
+							.selection__step._step-2
+								.carousel-controls.selection__controls
+									button.carousel-controls__btn.selection__control._prev(data-hide=".selection__step._step-2" data-link=".selection__step._step-1" data-stage-remove=".selection__stage._stage-2")
+										svg(width="53" height="24" viewBox="0 0 53 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+											path(d="M12 2L2 12M2 12L12 22M2 12L52 12" stroke="#45A7F5" stroke-width="2" stroke-linecap="square")
+									button.carousel-controls__btn.selection__control._next(data-hide=".selection__step._step-2" data-link=".selection__step._step-3" data-stage-add=".selection__stage._stage-3" disabled)
+										svg(height="24" viewBox="0 0 53 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+											path(d="M12 2L2 12M2 12L12 22M2 12L52 12" stroke="#45A7F5" stroke-width="2" stroke-linecap="square")
+
+								.selection__title Под ваш запрос подходят
+
+								.selection__doctors
+									.selection__doctor(data-services="Хирургия, Диагностика")
+										input#selection-doctor-1.selection__doctor-input(type="radio" name="selection_doctor" value="Дмитрий")
+										label.selection__doctor-label(for="selection-doctor-1")
+											picture
+												source(type="image/webp" srcset="img/tmp/selection-doctor.webp")
+												img(src="img/tmp/selection-doctor.jpg" alt="")
+											span Дмитрий
+												strong 10 лет опыта
+									.selection__doctor(data-services="Хирургия, Диагностика")
+										input#selection-doctor-2.selection__doctor-input(type="radio" name="selection_doctor" value="Яна")
+										label.selection__doctor-label(for="selection-doctor-2")
+											picture
+												source(type="image/webp" srcset="img/tmp/selection-doctor.webp")
+												img(src="img/tmp/selection-doctor.jpg" alt="")
+											span Яна
+												strong 2 года опыта
+									.selection__doctor(data-services="Терапия, Профгигиена")
+										input#selection-doctor-3.selection__doctor-input(type="radio" name="selection_doctor" value="Анастасия")
+										label.selection__doctor-label(for="selection-doctor-3")
+											picture
+												source(type="image/webp" srcset="img/tmp/selection-doctor.webp")
+												img(src="img/tmp/selection-doctor.jpg" alt="")
+											span Анастасия
+												strong 14 лет опыта
+									.selection__doctor(data-services="Терапия, Профгигиена")
+										input#selection-doctor-4.selection__doctor-input(type="radio" name="selection_doctor" value="Мирвари")
+										label.selection__doctor-label(for="selection-doctor-4")
+											picture
+												source(type="image/webp" srcset="img/tmp/selection-doctor.webp")
+												img(src="img/tmp/selection-doctor.jpg" alt="")
+											span Мирвари
+												strong 4 года опыта
+								.selection__doctors-empty К сожалению, ничего не найдено
+
+
+							.selection__step._step-3
+								.carousel-controls.selection__controls
+									button.carousel-controls__btn.selection__control._prev(data-hide=".selection__step._step-3" data-link=".selection__step._step-2" data-stage-remove=".selection__stage._stage-3")
+										svg(width="53" height="24" viewBox="0 0 53 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+											path(d="M12 2L2 12M2 12L12 22M2 12L52 12" stroke="#45A7F5" stroke-width="2" stroke-linecap="square")
+
+								.selection__title Когда вам удобно?
+
+								.selection__datetimes
+									.selection__datetime
+										input#selection-date-time-1.selection__datetime-input(type="radio" name="selection_datetime" value="25 мар, пт 9:00")
+										label.selection__datetime-label(for="selection-date-time-1") 25 мар, пт
+											strong 09:00
+									.selection__datetime
+										input#selection-date-time-2.selection__datetime-input(type="radio" name="selection_datetime" value="26 мар, пт 9:00")
+										label.selection__datetime-label(for="selection-date-time-2") 26 мар, пт
+											strong 09:00
+									.selection__datetime
+										input#selection-date-time-3.selection__datetime-input(type="radio" name="selection_datetime" value="26 мар, пт 9:00")
+										label.selection__datetime-label(for="selection-date-time-3") 26 мар, пт
+											strong 09:00
+									.selection__datetime
+										input#selection-date-time-4.selection__datetime-input(type="radio" name="selection_datetime" value="26 мар, пт 9:00")
+										label.selection__datetime-label(for="selection-date-time-4") 26 мар, пт
+											strong 09:00
+									.selection__datetime
+										input#selection-date-time-5.selection__datetime-input(type="radio" name="selection_datetime" value="26 мар, пт 9:00")
+										label.selection__datetime-label(for="selection-date-time-5") 26 мар, пт
+											strong 09:00
+									.selection__datetime
+										input#selection-date-time-6.selection__datetime-input(type="radio" name="selection_datetime" value="26 мар, пт 9:00")
+										label.selection__datetime-label(for="selection-date-time-6") 26 мар, пт
+											strong 09:00
+
+						.points.selection__points
+							- var n = 0;
+							while n < 48
+								span
+								- n = n + 1;
+
+						svg.selection__wave(width="166" height="89" viewBox="0 0 166 89" fill="none" xmlns="http://www.w3.org/2000/svg")
+							use(xlink:href="#wave")
+
+					.selection__btn
+						button.btn._middle(data-hystmodal="#popup-order" type="button") Записаться на прием
+
+			include includes/_reviews.pug
+			include includes/_faq.pug
+
+			section.section.about
+				.container
+					.about__cols
+						.about__col._left
+							.about__subtitle О нас
+							h2.section__h2.about__h2 Стоматологическая клиника
+								span  "АКУЛА"
+							.about__text
+								p Клиника стоматологии «АКУЛА» предлагает жителям Владимира полный комплекс услуг, связанных с лечением, профилактикой стоматологических заболеваний и реставрацией зубов.
+								p Стоматологическая клиника «АКУЛА» задает новые стандарты в сфере платного лечения зубов во Владимире.
+								p Многие жители города знают нашу клинику как недорогое учреждение, где хорошо лечат зубы, используя современные подходы к обслуживанию пациентов.
+						.about__col._right
+							.about__img
+								picture
+									source(type="image/webp" srcset="img/shark.webp")
+									img(src="img/shark.png" alt="Стоматологическая клиника Акула")
+								.about__img-circle
+								.points.about__points
+									- var n = 0;
+									while n < 48
+										span
+										- n = n + 1;
+
+				svg.about__wave(width="166" height="89" viewBox="0 0 166 89" fill="none" xmlns="http://www.w3.org/2000/svg")
+					use(xlink:href="#wave-grey")
+
+			include includes/_sale.pug
+			include includes/_present.pug
+			include includes/_map.pug
+			include includes/_social.pug
+
+		include includes/_footer.pug
+		include includes/_svg.pug
+		include includes/_popup.pug
+		include includes/_scripts.pug

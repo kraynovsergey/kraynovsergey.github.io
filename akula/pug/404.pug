@@ -1,0 +1,37 @@
+doctype html
+html(lang="ru")
+	head
+		- var seo = {title: 'Страница не найдена', description: 'Описание страница не найдена', keywords: 'Ключи страница не найдена'}
+		include includes/_meta.pug
+	body
+		section.page-not-found
+			.container
+				.page-not-found__wrap
+					.page-not-found__title Ошибка!
+						span страница не найдена
+					picture
+						source(type="image/webp" srcset="img/404.webp")
+						img.page-not-found__img(src="img/404.png" alt="")
+					.page-not-found__link Перейти на
+						a(href="#")  Главную
+							svg(width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+								path(d="M1 10L19 10M13 18L21 10L13 2" stroke="#4AA9F5" stroke-width="2" stroke-linecap="square")
+
+				.page-not-found__circle.page-not-found__second-layer
+					.points.page-not-found__points.page-not-found__second-layer
+						- var n = 0;
+						while n < 48
+							span
+							- n = n + 1;
+
+				svg.page-not-found__wave.page-not-found__second-layer._blue(width="166" height="89" viewBox="0 0 166 89" fill="none" xmlns="http://www.w3.org/2000/svg")
+					use(xlink:href="#wave-blue")
+
+				svg.page-not-found__wave.page-not-found__second-layer._white(width="166" height="89" viewBox="0 0 166 89" fill="none" xmlns="http://www.w3.org/2000/svg")
+					use(xlink:href="#wave")
+
+
+
+
+		include includes/_svg.pug
+		include includes/_scripts.pug

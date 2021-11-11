@@ -1,0 +1,59 @@
+doctype html
+html(lang="ru")
+	head
+		- var seo = {title: 'Текстовая страница', description: 'Описание текстовой страницы', keywords: 'Ключи текстовой страницы'}
+		include includes/_meta.pug
+	body
+		include includes/_header.pug
+
+		main.main
+
+			section.subheader._small
+				.section.subheader__overflow._blue
+					.container
+						.subheader__back
+							a(href="") Главная
+								svg(width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+									path(d="M12 6L3 6M6 10L2 6L6 2" stroke="white" stroke-width="2" stroke-linecap="square")
+
+						h1.subheader__h1 Текстовая страница
+
+					svg.section__blue-box._bottom(width="1058" height="405" viewBox="0 0 1058 405" fill="none" xmlns="http://www.w3.org/2000/svg")
+						use(xlink:href="#section-blue")
+					svg.section__blue-box._top(width="1058" height="405" viewBox="0 0 1058 405" fill="none" xmlns="http://www.w3.org/2000/svg")
+						use(xlink:href="#section-blue")
+
+			section.section
+				.container
+					.text
+						p Клиника стоматологии «АКУЛА» предлагает жителям Владимира полный комплекс услуг, связанных с лечением, профилактикой стоматологических заболеваний и реставрацией зубов.
+						p Стоматологическая клиника «АКУЛА» задает новые стандарты в сфере платного лечения зубов во Владимире.
+						p Многие
+							a(href="") жители города
+							|  знают нашу клинику как недорогое учреждение, где хорошо лечат зубы, используя современные подходы к обслуживанию пациентов.
+						ul
+							li Пункт маркированного списка
+							li Пункт маркированного списка
+							li Пункт маркированного списка
+							li Пункт маркированного списка
+						ol
+							li Пункт нумерованноного списка
+							li Пункт нумерованноного списка
+							li Пункт нумерованноного списка
+							li Пункт нумерованноного списка
+						h2 Заголовок h2
+						p Клиника стоматологии «АКУЛА» предлагает жителям Владимира полный комплекс услуг, связанных с лечением, профилактикой стоматологических заболеваний и реставрацией зубов.
+						h3 Заголовок h3
+						p Клиника стоматологии «АКУЛА» предлагает жителям Владимира полный комплекс услуг, связанных с лечением, профилактикой стоматологических заболеваний и реставрацией зубов.
+
+			include includes/_faq.pug
+			include includes/_reviews.pug
+			include includes/_sale.pug
+			include includes/_present.pug
+			include includes/_map.pug
+			include includes/_social.pug
+
+		include includes/_footer.pug
+		include includes/_svg.pug
+		include includes/_popup.pug
+		include includes/_scripts.pug
