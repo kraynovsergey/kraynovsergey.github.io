@@ -1,6 +1,6 @@
 # kraynovsergey.github.io/damvamdom/
 Pages
-- https://kraynovsergey.github.io/damvamdom/index.html
+- https://kraynovsergey.github.io/damvamdom/main.html
 - https://kraynovsergey.github.io/damvamdom/builder.html
 - https://kraynovsergey.github.io/damvamdom/zhk.html
 - https://kraynovsergey.github.io/damvamdom/news.html
